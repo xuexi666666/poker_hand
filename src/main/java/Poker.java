@@ -3,9 +3,9 @@ import java.util.stream.Collectors;
 
 
 public class Poker implements Comparable<Poker> {
-    private List<Card> cards;
-    private int[] numbers;
-    private String[] suits;
+    protected List<Card> cards;
+    protected int[] numbers;
+    protected String[] suits;
 
     public Poker(List<Card> cards) {
         this.cards = new ArrayList<>(cards);
@@ -100,6 +100,26 @@ public class Poker implements Comparable<Poker> {
 
     private String[] suits() {
         return cards.stream().map(Card::getSuit).toArray(String[]::new);
+    }
+
+    public void setCards(List<Card> cards) {
+        this.cards = cards;
+    }
+
+    public int[] getNumbers() {
+        return numbers;
+    }
+
+    public void setNumbers(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    public String[] getSuits() {
+        return suits;
+    }
+
+    public void setSuits(String[] suits) {
+        this.suits = suits;
     }
 
     @Override

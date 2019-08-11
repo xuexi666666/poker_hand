@@ -1,10 +1,18 @@
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
+@RunWith(MockitoJUnitRunner.class)
 public class PokerTest {
     private List<Card> highCards;
     private Poker highCard;
@@ -178,15 +186,26 @@ public class PokerTest {
     @Test
     public void should_return_poker_kinds_level_highest_win_when_give_two_different_kinds_poker() {
         //given
-        List<Card> playerOneCards = Game.straight_flush_init();
-        Poker playerOne = new Poker(playerOneCards);
-
-        List<Card> playerTwoCards = Game.straight_init();
-        Poker playerTwo = new Poker(playerTwoCards);
+        Poker playerOne = mock(Poker.class);
+        Poker playerTwo = mock(Poker.class);
+        int randomLevelHiger = Game.rand.nextInt(GameProperty.STRAIGHT_FLUSH)+1;
+        int randomLevelLower = Game.rand.nextInt(randomLevelHiger);
         //when
+        when(playerOne.getPokerType()).thenReturn(randomLevelHiger);
+        when(playerTwo.getPokerType()).thenReturn(randomLevelLower);
+        when(playerOne.compareTo(playerTwo)).thenReturn(GameProperty.POKER_1_WINNER);
+        when(playerTwo.compareTo(playerOne)).thenReturn(GameProperty.POKER_2_WINNER);
+        int HigherLevel = playerOne.getPokerType();
+        int LowerLevel = playerTwo.getPokerType();
         int resOne = playerOne.compareTo(playerTwo);
         int resTwo = playerTwo.compareTo(playerOne);
         //then
+        verify(playerOne,times(1)).compareTo(playerTwo);
+        verify(playerOne,times(1)).getPokerType();
+        verify(playerTwo,times(1)).compareTo(playerOne);
+        verify(playerTwo,times(1)).getPokerType();
+        Assert.assertTrue(randomLevelHiger>randomLevelLower);
+        Assert.assertTrue(HigherLevel>LowerLevel);
         Assert.assertEquals(resOne, GameProperty.POKER_1_WINNER);
         Assert.assertEquals(resTwo, GameProperty.POKER_2_WINNER);
     }
