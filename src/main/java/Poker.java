@@ -54,8 +54,8 @@ public class Poker {
         }
         return GameProperty.NOT_EXISTS_POKER_TYPE;
     }
-    protected boolean Flush(List<Card> cards){
-        return false;
+    protected int isFlush(){
+        return Arrays.stream(suits).collect(Collectors.toSet()).size()==1?GameProperty.FLUSH:GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected boolean isFullHouse(List<Card> cards){
         return false;

@@ -18,6 +18,9 @@ public class PokerTest {
     private ArrayList<Card> straightCards;
     private Poker straight;
 
+    private ArrayList<Card> flushCards;
+    private Poker flush;
+
     public void one_pair_init(){
         //given
         pairCards = new ArrayList<>();
@@ -57,6 +60,16 @@ public class PokerTest {
         straightCards.add(new Card("6", "S"));
         straightCards.add(new Card("7", "D"));
         straight = new Poker(straightCards);
+    }
+
+    public void flush_init(){
+        flushCards = new ArrayList<>();
+        flushCards.add(new Card("2", "C"));
+        flushCards.add(new Card("4", "C"));
+        flushCards.add(new Card("7", "C"));
+        flushCards.add(new Card("8", "C"));
+        flushCards.add(new Card("T", "C"));
+        flush = new Poker(flushCards);
     }
 
     @Test
@@ -106,6 +119,16 @@ public class PokerTest {
         int res = straight.isStraight();
         //then
         Assert.assertEquals(res,GameProperty.STRAIGHT);
+    }
+
+    @Test
+    public void should_return_flush_when_give_a_flush_poker(){
+        //given
+        flush_init();
+        //when
+        int res = flush.isFlush();
+        //then
+        Assert.assertEquals(res,GameProperty.FLUSH);
     }
 
 }
