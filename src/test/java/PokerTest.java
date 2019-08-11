@@ -243,6 +243,17 @@ public class PokerTest {
     }
 
     @Test
+    public void should_return_tie_when_give_exactly_the_same_poker() {
+        //given
+        Poker playerOne = mock(Poker.class);
+        //when
+        when(playerOne.compareTo(playerOne)).thenReturn(GameProperty.TIE);
+        int resOne = playerOne.compareTo(playerOne);
+        //then
+        verify(playerOne,times(1)).compareTo(playerOne);
+        Assert.assertEquals(resOne, GameProperty.TIE);
+    }
+    @Test
     public void should_return_exits_poker_type_when_random_genentor_poker() {
         //given
         List<Card> randomCards = Game.random_init();

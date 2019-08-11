@@ -4,7 +4,6 @@
     <list default="true" id="f8bc364e-e97a-4339-8b79-ad5295906a9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PokerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PokerTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="678">
-              <caret line="238" column="63" selection-start-line="238" selection-start-column="63" selection-end-line="238" selection-end-column="63" />
+            <state relative-caret-position="384">
+              <caret line="253" column="72" selection-start-line="253" selection-start-column="72" selection-end-line="253" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -227,16 +226,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PokerTest">
+  <component name="RunManager" selected="JUnit.PokerTest.should_return_tie_when_give_exactly_the_same_poker">
     <configuration name="Poker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Poker" />
-      <module name="junit_test" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PokerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PokerTest" />
       <module name="junit_test" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -271,13 +263,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PokerTest.should_return_tie_when_give_exactly_the_same_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PokerTest" />
+      <option name="METHOD_NAME" value="should_return_tie_when_give_exactly_the_same_poker" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PokerTest.should_return_tie_when_give_exactly_the_same_poker" />
         <item itemvalue="JUnit.PokerTest" />
         <item itemvalue="JUnit.PokerTest.should_return_poker_higher_card_win_when_give_two_identical_kinds_poker" />
         <item itemvalue="Application.Poker" />
         <item itemvalue="JUnit.PokerTest.main" />
-        <item itemvalue="Application.PokerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -425,25 +427,17 @@
       <option name="project" value="LOCAL" />
       <updated>1565555579095</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="refactor should_return_poker_higher_card_win_when_give_two_identical_kinds_poker test">
+      <created>1565556461453</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1565556461453</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokerTest - 2019.08.12 at 03h 48m 13s.xml">
-      <configuration name="PokerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerTest_should_return_poker_higher_card_win_when_give_two_identical_kinds_poker - 2019.08.12 at 04h 24m 19s.xml">
-      <configuration name="PokerTest.should_return_poker_higher_card_win_when_give_two_identical_kinds_poker" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerTest_should_return_poker_higher_card_win_when_give_two_identical_kinds_poker - 2019.08.12 at 04h 26m 41s.xml">
-      <configuration name="PokerTest.should_return_poker_higher_card_win_when_give_two_identical_kinds_poker" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerTest_main - 2019.08.12 at 04h 26m 48s.xml">
-      <configuration name="PokerTest.main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerTest_main - 2019.08.12 at 04h 26m 54s.xml">
-      <configuration name="PokerTest.main" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PokerTest_main - 2019.08.12 at 04h 27m 05s.xml">
       <configuration name="PokerTest.main" configurationId="JUnit" />
     </history-entry>
@@ -458,6 +452,21 @@
     </history-entry>
     <history-entry file="PokerTest_should_return_poker_higher_card_win_when_give_two_identical_kinds_poker - 2019.08.12 at 04h 30m 44s.xml">
       <configuration name="PokerTest.should_return_poker_higher_card_win_when_give_two_identical_kinds_poker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest_should_return_poker_higher_card_win_when_give_two_identical_kinds_poker - 2019.08.12 at 04h 43m 29s.xml">
+      <configuration name="PokerTest.should_return_poker_higher_card_win_when_give_two_identical_kinds_poker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest - 2019.08.12 at 04h 43m 45s.xml">
+      <configuration name="PokerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest - 2019.08.12 at 04h 45m 50s.xml">
+      <configuration name="PokerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest_should_return_poker_higher_card_win_when_give_two_identical_kinds_poker - 2019.08.12 at 04h 46m 48s.xml">
+      <configuration name="PokerTest.should_return_poker_higher_card_win_when_give_two_identical_kinds_poker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest - 2019.08.12 at 04h 46m 59s.xml">
+      <configuration name="PokerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -476,7 +485,7 @@
       <window_info id="Job Explorer" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.044970416" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15857989" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39171597" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -550,7 +559,8 @@
     <MESSAGE value=" refactor should_return_poker_kinds_level_highest_win_when_give_two_different_kinds_poker test" />
     <MESSAGE value="add should_return_poker_higher_card_win_when_give_two_identical_kinds_poker test" />
     <MESSAGE value="verification StringUtils Whether it takes effect" />
-    <option name="LAST_COMMIT_MESSAGE" value="verification StringUtils Whether it takes effect" />
+    <MESSAGE value="refactor should_return_poker_higher_card_win_when_give_two_identical_kinds_poker test" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor should_return_poker_higher_card_win_when_give_two_identical_kinds_poker test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -923,8 +933,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="238" column="63" selection-start-line="238" selection-start-column="63" selection-end-line="238" selection-end-column="63" />
+        <state relative-caret-position="384">
+          <caret line="253" column="72" selection-start-line="253" selection-start-column="72" selection-end-line="253" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
