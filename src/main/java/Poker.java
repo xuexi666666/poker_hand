@@ -15,6 +15,26 @@ public class Poker {
         Arrays.sort(suits);
     }
 
+    public int getPokerType(){
+        int not_exits_type = GameProperty.NOT_THIS_POKER_TYPE;
+        if(isStraightFlush()!= not_exits_type){
+            return isStraightFlush();
+        }else if(isFourOfAKind()!= not_exits_type){
+            return isFourOfAKind();
+        }else if(isFullHouse()!= not_exits_type){
+            return isFullHouse();
+        }else if(isStraight() != not_exits_type){
+            return isStraight();
+        }else if(isThreeOfAKind() != not_exits_type){
+            return isThreeOfAKind();
+        }else if(isTwoPair() != not_exits_type){
+            return isTwoPair();
+        }else if(isOnePair() != not_exits_type){
+            return isOnePair();
+        }else{
+            return GameProperty.HIGH_CARD;
+        }
+    }
     protected int isOnePair() {
         for (int i = 0; i < numbers.length - 1; i++) {
             if (numbers[i] == numbers[i + 1]) {
@@ -48,8 +68,8 @@ public class Poker {
 
     protected int isStraight() {
         boolean MaxMinusMinIsFour = numbers[4] - numbers[0] == 4;
-        Set set = Arrays.stream(numbers).boxed().collect(Collectors.toSet());
-        return (MaxMinusMinIsFour && set.size() == 5) ? GameProperty.STRAIGHT : GameProperty.NOT_THIS_POKER_TYPE;
+        long numberSize = Arrays.stream(numbers).distinct().count();
+        return (MaxMinusMinIsFour && numberSize == 5) ? GameProperty.STRAIGHT : GameProperty.NOT_THIS_POKER_TYPE;
     }
 
     protected int isFlush() {

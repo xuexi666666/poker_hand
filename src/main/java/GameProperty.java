@@ -26,7 +26,7 @@ interface GameProperty {
             put("A", 14);
         }
     };
-
+    String SUIT_STYLE = "CDHS";
     String POKER_1_WINNER = "poker1 winner";
     String POKER_2_WINNER = "poker2 winner";
     String TIE = "tie";

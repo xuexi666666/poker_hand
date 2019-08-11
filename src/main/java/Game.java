@@ -2,6 +2,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface Game {
+    static List<Card> high_card_init(){
+        List<Card> highCards = new ArrayList<>();
+        highCards.add(new Card("3", "C"));
+        highCards.add(new Card("7", "S"));
+        highCards.add(new Card("5", "H"));
+        highCards.add(new Card("6", "S"));
+        highCards.add(new Card("T", "D"));
+        return highCards;
+    }
+
     static List<Card> one_pair_init(){
         List<Card> pairCards = new ArrayList<>();
         pairCards.add(new Card("3", "C"));

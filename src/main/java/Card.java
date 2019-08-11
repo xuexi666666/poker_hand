@@ -3,6 +3,9 @@ public class Card implements Comparable<Card> {
     private String suit;
 
     public Card(String value, String s) {
+        if(GameProperty.CONVERT_NUMBER.get(value) == null || (s.length()!=1||!GameProperty.SUIT_STYLE.contains(s))){
+            throw new NullPointerException("传入参数不正确");
+        }
         number = GameProperty.CONVERT_NUMBER.get(value);
         suit = s;
     }

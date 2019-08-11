@@ -6,6 +6,9 @@ import java.util.Arrays;
 import java.util.List;
 
 public class PokerTest {
+    private List<Card> highCards;
+    private Poker highCard;
+
     private List<Card> pairCards;
     private Poker onePair;
 
@@ -38,6 +41,27 @@ public class PokerTest {
         Poker poker2 = new Poker(Arrays.asList(card2));
         String res = Game.getWinnerByOneCard(poker1,poker2);
         Assert.assertEquals(GameProperty.POKER_2_WINNER,res);
+    }
+
+    @Test
+    public void should_return_HIGH_CARD_when_give_a_high_card_poker(){
+        //given
+        highCards = Game.high_card_init();
+        highCard = new Poker(highCards);
+        //when
+        int res = highCard.getPokerType();
+        //then
+        Assert.assertEquals(res,GameProperty.HIGH_CARD);
+    }
+
+    @Test
+    public void should_throw_null_exception_when_give_error_params_init_cards(){
+        //given+when+then
+        try {
+            Card card = new Card("10", "S");
+        }catch (NullPointerException ex){
+            Assert.assertEquals("传入参数不正确",ex.getMessage());
+        }
     }
 
     @Test
@@ -127,6 +151,16 @@ public class PokerTest {
         Assert.assertEquals(res,GameProperty.STRAIGHT_FLUSH);
     }
 
+    @Test
+    public void should_return__when_give_a_Straight_Flush_poker(){
+        //given
+        straightFlushCards = Game.straight_flush_init();
+        straightFlush = new Poker(straightFlushCards);
+        //when
+        int res = straightFlush.isStraightFlush();
+        //then
+        Assert.assertEquals(res,GameProperty.STRAIGHT_FLUSH);
+    }
     @Test
     public void should_return_not_this_poker_type_when_give_a_error_poker(){
         //given
