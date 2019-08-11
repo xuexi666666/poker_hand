@@ -1,6 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class Poker {
@@ -47,8 +46,13 @@ public class Poker {
 
         return GameProperty.NOT_EXISTS_POKER_TYPE;
     }
-    protected boolean isStraight(List<Card> cards){
-        return false;
+    protected int isStraight(){
+        boolean MaxMinusMinIsFour = numbers[4]-numbers[0] == 4;
+        Set set  = Arrays.stream(numbers).boxed().collect(Collectors.toSet());
+        if(MaxMinusMinIsFour && set.size() == 5){
+            return GameProperty.STRAIGHT;
+        }
+        return GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected boolean Flush(List<Card> cards){
         return false;
