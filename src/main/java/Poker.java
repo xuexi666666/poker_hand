@@ -26,8 +26,17 @@ public class Poker {
         }
         return GameProperty.NOT_EXISTS_POKER_TYPE;
     }
-    protected boolean isTwoPair(List<Card> cards){
-        return false;
+    protected int isTwoPair(){
+        int count = 0;
+        for (int i = 0; i < numbers.length-1; i++) {
+            if(numbers[i] == numbers[i+1]){
+                count++;
+            }
+            if (count == 2){
+                return GameProperty.TWO_PAIR;
+            }
+        }
+        return GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected boolean isThreeOfAKind(List<Card> cards){
         return false;
