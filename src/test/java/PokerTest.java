@@ -188,4 +188,15 @@ public class PokerTest {
         //then
         Assert.assertEquals(res, GameProperty.POKER_1_WINNER);
     }
+
+    @Test
+    public void should_return_exits_poker_type_when_random_genentor_poker() {
+        //given
+        List<Card> randomCards = Game.random_init();
+        Poker randPoker = new Poker(randomCards);
+        //when
+        int res = randPoker.getPokerType();
+        // then
+        Assert.assertNotEquals(GameProperty.NOT_THIS_POKER_TYPE,res);
+    }
 }

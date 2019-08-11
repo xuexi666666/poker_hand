@@ -1,7 +1,21 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public interface Game {
+    Random rand = new Random();
+    String[] suitsStyle = {"C","D","S","H"};
+    String[] numbers = {"2","3","4","5","6","7","8","9","T","J","Q","K","A"};
+    static List<Card> random_init(){
+        List<Card> randomCards = new ArrayList<>();
+        randomCards.add(new Card(numbers[rand.nextInt(13)], suitsStyle[rand.nextInt(4)]));
+        randomCards.add(new Card(numbers[rand.nextInt(13)], suitsStyle[rand.nextInt(4)]));
+        randomCards.add(new Card(numbers[rand.nextInt(13)], suitsStyle[rand.nextInt(4)]));
+        randomCards.add(new Card(numbers[rand.nextInt(13)], suitsStyle[rand.nextInt(4)]));
+        randomCards.add(new Card(numbers[rand.nextInt(13)], suitsStyle[rand.nextInt(4)]));
+        return randomCards;
+    }
+
     static List<Card> high_card_init(){
         List<Card> highCards = new ArrayList<>();
         highCards.add(new Card("3", "C"));
