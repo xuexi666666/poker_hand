@@ -2,11 +2,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import static org.mockito.Mockito.*;
@@ -44,20 +41,24 @@ public class PokerTest {
 
     @Test
     public void should_return_who_win_when_give_each_player_one_poker() {
+        //given
         Card card1 = new Card("3", "H");
         Card card2 = new Card("4", "H");
         Poker poker1 = new Poker(Arrays.asList(card1));
         Poker poker2 = new Poker(Arrays.asList(card2));
+        //when
         int res = Game.getWinnerByOneCard(poker1, poker2);
+        //then
         Assert.assertEquals(GameProperty.POKER_2_WINNER, res);
     }
 
     @Test
     public void should_throw_null_exception_when_give_error_params_init_cards() {
-        //given+when+then
         try {
+            //given
             Card card = new Card("10", "S");
         } catch (NullPointerException ex) {
+            //when+then
             Assert.assertEquals("传入参数不正确", ex.getMessage());
         }
     }
@@ -184,7 +185,7 @@ public class PokerTest {
     }
 
     @Test
-    public void should_return_poker_kinds_level_highest_win_when_give_two_different_kinds_poker() {
+    public void should_return_poker_kinds_level_highest_win_when_give_two_different_kinds_poker_by_mock() {
         //given
         Poker playerOne = mock(Poker.class);
         Poker playerTwo = mock(Poker.class);
@@ -211,7 +212,7 @@ public class PokerTest {
     }
 
     @Test
-    public void should_return_poker_higher_card_win_when_give_two_identical_kinds_poker() {
+    public void should_return_poker_higher_card_win_when_give_two_identical_kinds_poker_by_mock() {
         //given
         Poker playerOne = mock(Poker.class);
         Poker playerTwo = mock(Poker.class);
@@ -243,7 +244,7 @@ public class PokerTest {
     }
 
     @Test
-    public void should_return_tie_when_give_exactly_the_same_poker() {
+    public void should_return_tie_when_give_exactly_the_same_poker_by_mock() {
         //given
         Poker playerOne = mock(Poker.class);
         Poker playerTwo = mock(Poker.class);
@@ -279,6 +280,33 @@ public class PokerTest {
         Assert.assertEquals(resTwo, GameProperty.TIE);
         Assert.assertEquals(resThree, GameProperty.TIE);
         Assert.assertEquals(resFour, GameProperty.TIE);
+    }
+
+    @Test
+    public void should_winner_when_poker_level_higher() {
+        //given
+        List<Card> randomInitOne = Game.random_init();
+        List<Card> randomInitTwo = Game.random_init();
+        Poker playerOne = new Poker(randomInitOne);
+        Poker playerTwo = new Poker(randomInitTwo);
+        String playerOneNumsStr = StringUtils.join(playerOne.getNumbers(),',');
+        String playerTwoNumsStr = StringUtils.join(playerTwo.getNumbers(),',');
+        int playerOneType = playerOne.getPokerType();
+        int playerTwoType = playerTwo.getPokerType();
+        int compareNumStr = playerOneNumsStr.compareTo(playerTwoNumsStr);
+        int compareType = playerOneType-playerTwoType;
+        int winnerByType = compareType>0?GameProperty.POKER_1_WINNER:
+                (compareType<0?GameProperty.POKER_2_WINNER:GameProperty.TIE);
+        int winnerByNums = compareNumStr>0?GameProperty.POKER_1_WINNER:
+                (compareNumStr<0?GameProperty.POKER_2_WINNER:GameProperty.TIE);
+        int realOneRes  = winnerByType != 0?winnerByType:winnerByNums;
+        int realTwoRes  = realOneRes != 0?(realOneRes==1?GameProperty.POKER_2_WINNER:GameProperty.POKER_1_WINNER):(winnerByNums);
+        //then
+        int resultOne = playerOne.compareTo(playerTwo);
+        int resultTwo = playerTwo.compareTo(playerOne);
+        //when
+        Assert.assertEquals(realOneRes,resultOne);
+        Assert.assertEquals(realTwoRes,resultTwo);
     }
     @Test
     public void should_return_exits_poker_type_when_random_genentor_poker() {

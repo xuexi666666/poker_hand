@@ -1,7 +1,6 @@
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 
 public class Poker implements Comparable<Poker> {
@@ -9,13 +8,10 @@ public class Poker implements Comparable<Poker> {
     private int[] numbers;
     private String[] suits;
 
-    public static void main(String[] args) {
-        System.out.println(StringUtils.join(new int[]{1,2,3},','));
-    }
     public Poker(List<Card> cards) {
         this.cards = new ArrayList<>(cards);
-        numbers = values();
-        suits = suits();
+        numbers = convertIntArray();
+        suits = convertStringArray();
         Arrays.sort(numbers);
         Arrays.sort(suits);
     }
@@ -100,11 +96,11 @@ public class Poker implements Comparable<Poker> {
         return cards;
     }
 
-    private int[] values() {
+    private int[] convertIntArray() {
         return cards.stream().mapToInt(Card::getNumber).toArray();
     }
 
-    private String[] suits() {
+    private String[] convertStringArray() {
         return cards.stream().map(Card::getSuit).toArray(String[]::new);
     }
 
@@ -139,7 +135,8 @@ public class Poker implements Comparable<Poker> {
         }else{
             String thisNumStr = StringUtils.join(numbers,',');
             String otherNumStr = StringUtils.join(o.getNumbers(),',');
-            return thisNumStr.compareTo(otherNumStr);
+            int res = thisNumStr.compareTo(otherNumStr);
+            return res>0?GameProperty.POKER_1_WINNER:(res<0?GameProperty.POKER_2_WINNER:GameProperty.TIE);
         }
     }
 }
