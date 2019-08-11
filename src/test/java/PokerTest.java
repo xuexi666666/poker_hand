@@ -246,12 +246,39 @@ public class PokerTest {
     public void should_return_tie_when_give_exactly_the_same_poker() {
         //given
         Poker playerOne = mock(Poker.class);
+        Poker playerTwo = mock(Poker.class);
+        int randomLevel = Game.rand.nextInt(GameProperty.STRAIGHT_FLUSH)+1;
+        int[] numbers = Game.poker_numbers_bigger_init(randomLevel);
+
         //when
+        when(playerOne.getPokerType()).thenReturn(randomLevel);
+        when(playerTwo.getPokerType()).thenReturn(randomLevel);
+        when(playerOne.getNumbers()).thenReturn(numbers);
+        when(playerTwo.getNumbers()).thenReturn(numbers);
         when(playerOne.compareTo(playerOne)).thenReturn(GameProperty.TIE);
+        when(playerOne.compareTo(playerTwo)).thenReturn(GameProperty.TIE);
+        when(playerTwo.compareTo(playerOne)).thenReturn(GameProperty.TIE);
+        when(playerTwo.compareTo(playerTwo)).thenReturn(GameProperty.TIE);
+        int playerOneLevel = playerOne.getPokerType();
+        int playerTwoLevel = playerTwo.getPokerType();
+        String oneNumbersStr = StringUtils.join(playerOne.getNumbers(),',');
+        String twoNumbersStr = StringUtils.join(playerTwo.getNumbers(),',');
+        int numsCompare = StringUtils.compare(oneNumbersStr,twoNumbersStr);
         int resOne = playerOne.compareTo(playerOne);
+        int resTwo = playerTwo.compareTo(playerOne);
+        int resThree = playerTwo.compareTo(playerTwo);
+        int resFour = playerOne.compareTo(playerTwo);
+
         //then
-        verify(playerOne,times(1)).compareTo(playerOne);
+        verify(playerOne,times(1)).getPokerType();
+        verify(playerOne,times(1)).getNumbers();
+        verify(playerOne,times(1)).compareTo(playerTwo);
+        Assert.assertTrue(playerOneLevel==playerTwoLevel);
+        Assert.assertTrue(numsCompare == 0);
         Assert.assertEquals(resOne, GameProperty.TIE);
+        Assert.assertEquals(resTwo, GameProperty.TIE);
+        Assert.assertEquals(resThree, GameProperty.TIE);
+        Assert.assertEquals(resFour, GameProperty.TIE);
     }
     @Test
     public void should_return_exits_poker_type_when_random_genentor_poker() {

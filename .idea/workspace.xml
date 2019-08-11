@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="253" column="72" selection-start-line="253" selection-start-column="72" selection-end-line="253" selection-end-column="72" />
+            <state relative-caret-position="299">
+              <caret line="251" column="8" selection-start-line="251" selection-start-column="8" selection-end-line="251" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -434,16 +434,17 @@
       <option name="project" value="LOCAL" />
       <updated>1565556461453</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add should_return_tie_when_give_exactly_the_same_poker test">
+      <created>1565557082275</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1565557082275</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokerTest_main - 2019.08.12 at 04h 27m 05s.xml">
-      <configuration name="PokerTest.main" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerTest_main - 2019.08.12 at 04h 27m 11s.xml">
-      <configuration name="PokerTest.main" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PokerTest_main - 2019.08.12 at 04h 27m 17s.xml">
       <configuration name="PokerTest.main" configurationId="JUnit" />
     </history-entry>
@@ -468,6 +469,12 @@
     <history-entry file="PokerTest - 2019.08.12 at 04h 46m 59s.xml">
       <configuration name="PokerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PokerTest_should_return_tie_when_give_exactly_the_same_poker - 2019.08.12 at 04h 56m 41s.xml">
+      <configuration name="PokerTest.should_return_tie_when_give_exactly_the_same_poker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest_should_return_tie_when_give_exactly_the_same_poker - 2019.08.12 at 04h 57m 11s.xml">
+      <configuration name="PokerTest.should_return_tie_when_give_exactly_the_same_poker" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="393" y="30" width="1423" height="1006" extended-state="0" />
@@ -485,7 +492,7 @@
       <window_info id="Job Explorer" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.15857989" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3112426" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39171597" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -560,7 +567,8 @@
     <MESSAGE value="add should_return_poker_higher_card_win_when_give_two_identical_kinds_poker test" />
     <MESSAGE value="verification StringUtils Whether it takes effect" />
     <MESSAGE value="refactor should_return_poker_higher_card_win_when_give_two_identical_kinds_poker test" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor should_return_poker_higher_card_win_when_give_two_identical_kinds_poker test" />
+    <MESSAGE value="add should_return_tie_when_give_exactly_the_same_poker test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add should_return_tie_when_give_exactly_the_same_poker test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -933,8 +941,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="253" column="72" selection-start-line="253" selection-start-column="72" selection-end-line="253" selection-end-column="72" />
+        <state relative-caret-position="299">
+          <caret line="251" column="8" selection-start-line="251" selection-start-column="8" selection-end-line="251" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
