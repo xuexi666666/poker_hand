@@ -38,8 +38,14 @@ public class Poker {
         }
         return GameProperty.NOT_EXISTS_POKER_TYPE;
     }
-    protected boolean isThreeOfAKind(List<Card> cards){
-        return false;
+    protected int isThreeOfAKind(){
+        for (int i = 0; i < numbers.length - 2; i++) {
+            if (numbers[i] == numbers[i + 1] && numbers[i] == numbers[i + 2]) {
+                return GameProperty.THREE_OF_A_KIND;
+            }
+        }
+
+        return GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected boolean isStraight(List<Card> cards){
         return false;

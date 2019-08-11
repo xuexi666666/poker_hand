@@ -19,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Poker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+            <state relative-caret-position="418">
+              <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state relative-caret-position="428">
+              <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,6 +69,7 @@
       <find>private</find>
       <find>public</find>
       <find>pairCards</find>
+      <find>twoPairCards</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -93,8 +94,8 @@
         <option value="$PROJECT_DIR$/src/main/java/GameProperty.java" />
         <option value="$PROJECT_DIR$/src/main/java/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/Player.java" />
-        <option value="$PROJECT_DIR$/src/test/java/PokerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Poker.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PokerTest.java" />
       </list>
     </option>
   </component>
@@ -106,8 +107,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="473" />
-    <option name="y" value="17" />
+    <option name="x" value="791" />
+    <option name="y" value="136" />
     <option name="width" value="1423" />
     <option name="height" value="1034" />
   </component>
@@ -141,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PokerTest.should_return_TWO_PAIR_win_when_give_tow_pair_of_identical_cards">
+  <component name="RunManager" selected="JUnit.PokerTest.should_return_ThreeOfAKind_when_give_a_three_of_kind_poker">
     <configuration name="PokerTest.should_compare_and_return_who_win_when_give_cardOneList_and_cardTwoList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <option name="PACKAGE_NAME" value="" />
@@ -172,6 +173,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PokerTest.should_return_ThreeOfAKind_when_give_a_three_of_kind_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PokerTest" />
+      <option name="METHOD_NAME" value="should_return_ThreeOfAKind_when_give_a_three_of_kind_poker" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PokerTest.should_return_who_win_when_give_each_player_one_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <option name="PACKAGE_NAME" value="" />
@@ -182,23 +193,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PokerTest.testComparePoker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit_test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PokerTest" />
-      <option name="METHOD_NAME" value="testComparePoker" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PokerTest.should_return_ThreeOfAKind_when_give_a_three_of_kind_poker" />
         <item itemvalue="JUnit.PokerTest.should_return_TWO_PAIR_win_when_give_tow_pair_of_identical_cards" />
         <item itemvalue="JUnit.PokerTest.should_return_who_win_when_give_each_player_one_poker" />
         <item itemvalue="JUnit.PokerTest.should_compare_and_return_who_win_when_give_cardOneList_and_cardTwoList" />
         <item itemvalue="JUnit.PokerTest.should_compare_and_return_who_win_when_give_cardOne_and_cardTwo" />
-        <item itemvalue="JUnit.PokerTest.testComparePoker" />
       </list>
     </recent_temporary>
   </component>
@@ -227,13 +228,17 @@
       <option name="project" value="LOCAL" />
       <updated>1565532511429</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Determine if the poker is two pairs of subtypes">
+      <created>1565533318256</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1565533318256</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SalesAppTest_testGenerateReport - 2019.08.11 at 14h 41m 19s.xml">
-      <configuration name="SalesAppTest.testGenerateReport" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SalesAppTest - 2019.08.11 at 14h 47m 55s.xml">
       <configuration name="SalesAppTest" configurationId="JUnit" />
     </history-entry>
@@ -261,9 +266,12 @@
     <history-entry file="PokerTest_should_return_who_win_when_give_each_player_one_poker - 2019.08.11 at 20h 59m 59s.xml">
       <configuration name="PokerTest.should_return_who_win_when_give_each_player_one_poker" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PokerTest_should_return_TWO_PAIR_win_when_give_tow_pair_of_identical_cards - 2019.08.11 at 22h 21m 16s.xml">
+      <configuration name="PokerTest.should_return_TWO_PAIR_win_when_give_tow_pair_of_identical_cards" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="547" y="53" width="1423" height="1034" extended-state="0" />
+    <frame x="791" y="136" width="1423" height="1034" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.23094004" />
@@ -278,7 +286,7 @@
       <window_info id="Job Explorer" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31464532" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.185567" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43973213" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -302,7 +310,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Determine if the poker is a pair of subtypes" />
     <MESSAGE value="Compare a Card" />
-    <option name="LAST_COMMIT_MESSAGE" value="Compare a Card" />
+    <MESSAGE value="Determine if the poker is two pairs of subtypes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Determine if the poker is two pairs of subtypes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/main.iml">
@@ -579,6 +588,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Player.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Card.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -586,23 +598,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Poker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        <state relative-caret-position="418">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Card.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Poker.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="35" column="45" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+        <state relative-caret-position="428">
+          <caret line="73" column="60" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

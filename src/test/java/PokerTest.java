@@ -12,6 +12,8 @@ public class PokerTest {
     private ArrayList<Card> twoPairCards;
     private Poker twoPair;
 
+    private ArrayList<Card> threeOfAKindCards;
+    private Poker threeOfAKind;
     @Before
     public void init(){
         //given
@@ -30,6 +32,14 @@ public class PokerTest {
         twoPairCards.add(new Card("6", "S"));
         twoPairCards.add(new Card("T", "D"));
         twoPair = new Poker(twoPairCards);
+
+        threeOfAKindCards = new ArrayList<Card>();
+        threeOfAKindCards.add(new Card("3", "C"));
+        threeOfAKindCards.add(new Card("3", "S"));
+        threeOfAKindCards.add(new Card("3", "H"));
+        threeOfAKindCards.add(new Card("6", "S"));
+        threeOfAKindCards.add(new Card("T", "D"));
+        threeOfAKind = new Poker(threeOfAKindCards);
     }
     @Test
     public void should_return_who_win_when_give_each_player_one_poker(){
@@ -42,17 +52,26 @@ public class PokerTest {
     }
 
     @Test
-    public void should_return_ONE_PAIR_win_when_give_a_pair_of_identical_cards(){
+    public void should_return_ONE_PAIR_when_give_a_pair_of_identical_cards(){
         //when
         int res = onePair.isOnePair();
         //then
         Assert.assertEquals(res,GameProperty.ONE_PAIR);
     }
     @Test
-    public void should_return_TWO_PAIR_win_when_give_tow_pair_of_identical_cards(){
+    public void should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards(){
         //when
         int res = twoPair.isTwoPair();
         //then
         Assert.assertEquals(res,GameProperty.TWO_PAIR);
     }
+
+    @Test
+    public void should_return_ThreeOfAKind_when_give_a_three_of_kind_poker(){
+        //when
+        int res = threeOfAKind.isThreeOfAKind();
+        //then
+        Assert.assertEquals(res,GameProperty.THREE_OF_A_KIND);
+    }
+
 }
