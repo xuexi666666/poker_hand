@@ -43,27 +43,23 @@ public class Poker {
                 return GameProperty.THREE_OF_A_KIND;
             }
         }
-
         return GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected int isStraight(){
         boolean MaxMinusMinIsFour = numbers[4]-numbers[0] == 4;
         Set set  = Arrays.stream(numbers).boxed().collect(Collectors.toSet());
-        if(MaxMinusMinIsFour && set.size() == 5){
-            return GameProperty.STRAIGHT;
-        }
-        return GameProperty.NOT_EXISTS_POKER_TYPE;
+        return (MaxMinusMinIsFour && set.size() == 5)?GameProperty.STRAIGHT:GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected int isFlush(){
-        return Arrays.stream(suits).collect(Collectors.toSet()).size()==1?GameProperty.FLUSH:GameProperty.NOT_EXISTS_POKER_TYPE;
+        return suits[0]==suits[4]?GameProperty.FLUSH:GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected int  isFullHouse(){
         boolean isFrontThreeNumberEqual = (numbers[0]==numbers[1])&&(numbers[0]==numbers[2]);
         boolean isLastTwoNumberEqual = numbers[3]==numbers[4];
         return (isFrontThreeNumberEqual&&isLastTwoNumberEqual)?GameProperty.FULL_HOUSE:GameProperty.NOT_EXISTS_POKER_TYPE;
     }
-    protected boolean isFourOfAKind(List<Card> cards){
-        return false;
+    protected int isFourOfAKind(){
+        return (numbers[0] == numbers[3]||numbers[1]==numbers[4])?GameProperty.FOUR_OF_A_KIND:GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected boolean isStraightFlush(List<Card> cards){
         return false;

@@ -24,6 +24,9 @@ public class PokerTest {
     private ArrayList<Card> fullHouseCards;
     private Poker fullHouse;
 
+    private ArrayList<Card> fourOfAKindCards;
+    private Poker fourOfAKind;
+
     public void one_pair_init(){
         //given
         pairCards = new ArrayList<>();
@@ -84,6 +87,17 @@ public class PokerTest {
         fullHouseCards.add(new Card("6", "D"));
         fullHouse = new Poker(fullHouseCards);
     }
+
+    public void four_OfAKind_init(){
+        fourOfAKindCards = new ArrayList<>();
+        fourOfAKindCards.add(new Card("3", "C"));
+        fourOfAKindCards.add(new Card("3", "S"));
+        fourOfAKindCards.add(new Card("3", "H"));
+        fourOfAKindCards.add(new Card("3", "S"));
+        fourOfAKindCards.add(new Card("6", "D"));
+        fourOfAKind = new Poker(fourOfAKindCards);
+    }
+
     @Test
     public void should_return_who_win_when_give_each_player_one_poker(){
         Card card1 = new Card("3","H");
@@ -151,5 +165,15 @@ public class PokerTest {
         int res = fullHouse.isFullHouse();
         //then
         Assert.assertEquals(res,GameProperty.FULL_HOUSE);
+    }
+
+    @Test
+    public void should_return_four_OfAKind_when_give_a_four_OfAKind_poker(){
+        //given
+        four_OfAKind_init();
+        //when
+        int res = fourOfAKind.isFourOfAKind();
+        //then
+        Assert.assertEquals(res,GameProperty.FOUR_OF_A_KIND);
     }
 }
