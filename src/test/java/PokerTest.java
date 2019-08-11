@@ -126,4 +126,15 @@ public class PokerTest {
         //then
         Assert.assertEquals(res,GameProperty.STRAIGHT_FLUSH);
     }
+
+    @Test
+    public void should_return_not_this_poker_type_when_give_a_error_poker(){
+        //given
+        straightFlushCards = Game.straight_flush_init();
+        straightFlush = new Poker(straightFlushCards);
+        //when
+        int res = straightFlush.isFullHouse();
+        //then
+        Assert.assertEquals(res,GameProperty.NOT_THIS_POKER_TYPE);
+    }
 }
