@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-interface GameProperty {
+public interface GameProperty {
     Map<Integer, String> NUMBER_CONVERT = new HashMap<Integer, String>() {{
         put(10, "T");
         put(11, "J");
@@ -27,9 +27,9 @@ interface GameProperty {
         }
     };
     String SUIT_STYLE = "CDHS";
-    String POKER_1_WINNER = "poker1 winner";
-    String POKER_2_WINNER = "poker2 winner";
-    String TIE = "tie";
+    int POKER_1_WINNER = 1;
+    int POKER_2_WINNER = 2;
+    int TIE = 0;
     int NOT_THIS_POKER_TYPE = -1;
     int HIGH_CARD = 0;
     int ONE_PAIR = 1;

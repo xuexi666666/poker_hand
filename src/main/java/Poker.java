@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-public class Poker {
+public class Poker implements Comparable<Poker> {
     private List<Card> cards;
     private int[] numbers;
     private String[] suits;
@@ -17,7 +17,7 @@ public class Poker {
 
     public int getPokerType(){
         int not_exits_type = GameProperty.NOT_THIS_POKER_TYPE;
-        if(isStraightFlush()!= not_exits_type){
+        if(isStraightFlush() != not_exits_type){
             return isStraightFlush();
         }else if(isFourOfAKind()!= not_exits_type){
             return isFourOfAKind();
@@ -87,7 +87,7 @@ public class Poker {
     }
 
     protected int isStraightFlush() {
-        return (isStraight() != -1 && isStraight() != -1) ? GameProperty.STRAIGHT_FLUSH : GameProperty.NOT_THIS_POKER_TYPE;
+        return (isStraight() != -1 && isFlush() != -1) ? GameProperty.STRAIGHT_FLUSH : GameProperty.NOT_THIS_POKER_TYPE;
     }
 
     public List<Card> getCards() {
@@ -100,5 +100,18 @@ public class Poker {
 
     private String[] suits() {
         return cards.stream().map(Card::getSuit).toArray(String[]::new);
+    }
+
+    @Override
+    public int compareTo(Poker o) {
+        int thisPokerType = getPokerType();
+        int otherPokerType = o.getPokerType();
+        if(thisPokerType > otherPokerType){
+            return GameProperty.POKER_1_WINNER;
+        }else if(thisPokerType < otherPokerType){
+            return GameProperty.POKER_2_WINNER;
+        }else{
+            return 0;
+        }
     }
 }
