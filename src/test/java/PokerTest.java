@@ -216,20 +216,30 @@ public class PokerTest {
         Poker playerOne = mock(Poker.class);
         Poker playerTwo = mock(Poker.class);
         int randomLevel = Game.rand.nextInt(GameProperty.STRAIGHT_FLUSH)+1;
-        String biggerNumbersStr = StringUtils.join(Game.poker_numbers_bigger_init(randomLevel),',');
-        String smallerNumbersStr = StringUtils.join(Game.poker_numbers_smaller_init(randomLevel),',');
+        int[] biggerNumbers = Game.poker_numbers_bigger_init(randomLevel);
+        int[] smallerNumbers = Game.poker_numbers_smaller_init(randomLevel);
         //when
         when(playerOne.getPokerType()).thenReturn(randomLevel);
         when(playerTwo.getPokerType()).thenReturn(randomLevel);
-        when(playerOne.compareTo(playerTwo)).thenReturn(GameProperty.TIE);
-        int numsCompare = StringUtils.compare(biggerNumbersStr,smallerNumbersStr);
+        when(playerOne.getNumbers()).thenReturn(biggerNumbers);
+        when(playerTwo.getNumbers()).thenReturn(smallerNumbers);
+        when(playerOne.compareTo(playerTwo)).thenReturn(GameProperty.POKER_1_WINNER);
+        when(playerTwo.compareTo(playerOne)).thenReturn(GameProperty.POKER_2_WINNER);
         int playerOneLevel = playerOne.getPokerType();
         int playerTwoLevel = playerTwo.getPokerType();
+        String biggerNumbersStr = StringUtils.join(playerOne.getNumbers(),',');
+        String smallerNumbersStr = StringUtils.join(playerTwo.getNumbers(),',');
+        int numsCompare = StringUtils.compare(biggerNumbersStr,smallerNumbersStr);
         int resOne = playerOne.compareTo(playerTwo);
+        int resTwo = playerTwo.compareTo(playerOne);
         //then
+        verify(playerOne,times(1)).getPokerType();
+        verify(playerOne,times(1)).getNumbers();
+        verify(playerOne,times(1)).compareTo(playerTwo);
         Assert.assertTrue(playerOneLevel==playerTwoLevel);
         Assert.assertTrue(numsCompare == 1);
-        Assert.assertEquals(resOne, GameProperty.TIE);
+        Assert.assertEquals(resOne, GameProperty.POKER_1_WINNER);
+        Assert.assertEquals(resTwo, GameProperty.POKER_2_WINNER);
     }
 
     @Test
