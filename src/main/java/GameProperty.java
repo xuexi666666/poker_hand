@@ -30,7 +30,7 @@ interface GameProperty {
     String POKER_1_WINNER = "poker1 winner";
     String POKER_2_WINNER = "poker2 winner";
     String TIE = "tie";
-    int NOT_EXISTS_POKER_TYPE = -1;
+    int NOT_THIS_POKER_TYPE = -1;
     int HIGH_CARD = 0;
     int ONE_PAIR = 1;
     int TWO_PAIR = 2;

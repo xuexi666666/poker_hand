@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class PokerTest {
     private ArrayList<Card> pairCards;
@@ -26,6 +27,9 @@ public class PokerTest {
 
     private ArrayList<Card> fourOfAKindCards;
     private Poker fourOfAKind;
+
+    private ArrayList<Card> straightFlushCards;
+    private Poker straightFlush;
 
     public void one_pair_init(){
         //given
@@ -98,6 +102,15 @@ public class PokerTest {
         fourOfAKind = new Poker(fourOfAKindCards);
     }
 
+    public void straight_flush_init() {
+        straightFlushCards = new ArrayList<>();
+        straightFlushCards.add(new Card("6", "C"));
+        straightFlushCards.add(new Card("7", "C"));
+        straightFlushCards.add(new Card("8", "C"));
+        straightFlushCards.add(new Card("9", "C"));
+        straightFlushCards.add(new Card("T", "C"));
+        straightFlush = new Poker(straightFlushCards);
+    }
     @Test
     public void should_return_who_win_when_give_each_player_one_poker(){
         Card card1 = new Card("3","H");
@@ -175,5 +188,15 @@ public class PokerTest {
         int res = fourOfAKind.isFourOfAKind();
         //then
         Assert.assertEquals(res,GameProperty.FOUR_OF_A_KIND);
+    }
+
+    @Test
+    public void should_return_Straight_Flush_when_give_a_Straight_Flush_poker(){
+        //given
+        straight_flush_init();
+        //when
+        int res = straightFlush.isStraightFlush();
+        //then
+        Assert.assertEquals(res,GameProperty.STRAIGHT_FLUSH);
     }
 }
