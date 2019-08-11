@@ -57,8 +57,10 @@ public class Poker {
     protected int isFlush(){
         return Arrays.stream(suits).collect(Collectors.toSet()).size()==1?GameProperty.FLUSH:GameProperty.NOT_EXISTS_POKER_TYPE;
     }
-    protected boolean isFullHouse(List<Card> cards){
-        return false;
+    protected int  isFullHouse(){
+        boolean isFrontThreeNumberEqual = (numbers[0]==numbers[1])&&(numbers[0]==numbers[2]);
+        boolean isLastTwoNumberEqual = numbers[3]==numbers[4];
+        return (isFrontThreeNumberEqual&&isLastTwoNumberEqual)?GameProperty.FULL_HOUSE:GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected boolean isFourOfAKind(List<Card> cards){
         return false;

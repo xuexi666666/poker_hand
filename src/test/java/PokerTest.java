@@ -21,6 +21,9 @@ public class PokerTest {
     private ArrayList<Card> flushCards;
     private Poker flush;
 
+    private ArrayList<Card> fullHouseCards;
+    private Poker fullHouse;
+
     public void one_pair_init(){
         //given
         pairCards = new ArrayList<>();
@@ -72,6 +75,15 @@ public class PokerTest {
         flush = new Poker(flushCards);
     }
 
+    public void full_house_init(){
+        fullHouseCards = new ArrayList<>();
+        fullHouseCards.add(new Card("3", "C"));
+        fullHouseCards.add(new Card("3", "S"));
+        fullHouseCards.add(new Card("3", "H"));
+        fullHouseCards.add(new Card("6", "S"));
+        fullHouseCards.add(new Card("6", "D"));
+        fullHouse = new Poker(fullHouseCards);
+    }
     @Test
     public void should_return_who_win_when_give_each_player_one_poker(){
         Card card1 = new Card("3","H");
@@ -131,4 +143,13 @@ public class PokerTest {
         Assert.assertEquals(res,GameProperty.FLUSH);
     }
 
+    @Test
+    public void should_return_full_house_when_give_a_full_house_poker(){
+        //given
+        full_house_init();
+        //when
+        int res = fullHouse.isFullHouse();
+        //then
+        Assert.assertEquals(res,GameProperty.FULL_HOUSE);
+    }
 }
