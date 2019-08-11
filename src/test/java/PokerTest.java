@@ -184,9 +184,11 @@ public class PokerTest {
         List<Card> playerTwoCards = Game.straight_init();
         Poker playerTwo = new Poker(playerTwoCards);
         //when
-        int res = playerOne.compareTo(playerTwo);
+        int resOne = playerOne.compareTo(playerTwo);
+        int resTwo = playerTwo.compareTo(playerOne);
         //then
-        Assert.assertEquals(res, GameProperty.POKER_1_WINNER);
+        Assert.assertEquals(resOne, GameProperty.POKER_1_WINNER);
+        Assert.assertEquals(resTwo, GameProperty.POKER_2_WINNER);
     }
 
     @Test
