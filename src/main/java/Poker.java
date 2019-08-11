@@ -1,11 +1,13 @@
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
 
 public class Poker implements Comparable<Poker> {
-    protected List<Card> cards;
-    protected int[] numbers;
-    protected String[] suits;
+    private List<Card> cards;
+    private int[] numbers;
+    private String[] suits;
 
     public Poker(List<Card> cards) {
         this.cards = new ArrayList<>(cards);
@@ -35,6 +37,7 @@ public class Poker implements Comparable<Poker> {
             return GameProperty.HIGH_CARD;
         }
     }
+
     protected int isOnePair() {
         for (int i = 0; i < numbers.length - 1; i++) {
             if (numbers[i] == numbers[i + 1]) {
@@ -131,7 +134,9 @@ public class Poker implements Comparable<Poker> {
         }else if(thisPokerType < otherPokerType){
             return GameProperty.POKER_2_WINNER;
         }else{
-            return 0;
+            String thisNumStr = StringUtils.join(numbers);
+            String otherNumStr = StringUtils.join(o.getNumbers());
+            return thisNumStr.compareTo(otherNumStr);
         }
     }
 }

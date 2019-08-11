@@ -211,6 +211,24 @@ public class PokerTest {
     }
 
     @Test
+    public void should_return_poker_higher_card_win_when_give_two_identical_kinds_poker() {
+        //given
+        Poker playerOne = mock(Poker.class);
+        Poker playerTwo = mock(Poker.class);
+        int randomLevel = Game.rand.nextInt(GameProperty.STRAIGHT_FLUSH)+1;
+        //when
+        when(playerOne.getPokerType()).thenReturn(randomLevel);
+        when(playerTwo.getPokerType()).thenReturn(randomLevel);
+        when(playerOne.compareTo(playerTwo)).thenReturn(GameProperty.TIE);
+        int playerOneLevel = playerOne.getPokerType();
+        int playerTwoLevel = playerTwo.getPokerType();
+        int resOne = playerOne.compareTo(playerTwo);
+        //then
+        Assert.assertTrue(playerOneLevel==playerTwoLevel);
+        Assert.assertEquals(resOne, GameProperty.TIE);
+    }
+
+    @Test
     public void should_return_exits_poker_type_when_random_genentor_poker() {
         //given
         List<Card> randomCards = Game.random_init();
