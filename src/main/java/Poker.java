@@ -15,10 +15,6 @@ public class Poker {
         Arrays.sort(suits);
     }
 
-    protected boolean isHighCard(List<Card> cards) {
-        return false;
-    }
-
     protected int isOnePair() {
         for (int i = 0; i < numbers.length - 1; i++) {
             if (numbers[i] == numbers[i + 1]) {
