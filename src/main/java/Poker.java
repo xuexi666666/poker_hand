@@ -54,9 +54,9 @@ public class Poker {
         return suits[0]==suits[4]?GameProperty.FLUSH:GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected int  isFullHouse(){
-        boolean isFrontThreeNumberEqual = (numbers[0]==numbers[1])&&(numbers[0]==numbers[2]);
-        boolean isLastTwoNumberEqual = numbers[3]==numbers[4];
-        return (isFrontThreeNumberEqual&&isLastTwoNumberEqual)?GameProperty.FULL_HOUSE:GameProperty.NOT_EXISTS_POKER_TYPE;
+        boolean isThreeNumberEqual = (numbers[0]==numbers[2])||(numbers[2]==numbers[4]);
+        boolean isTwoNumberEqual = (numbers[3]==numbers[4]||numbers[0]==numbers[1]);
+        return (isThreeNumberEqual&&isTwoNumberEqual)?GameProperty.FULL_HOUSE:GameProperty.NOT_EXISTS_POKER_TYPE;
     }
     protected int isFourOfAKind(){
         return (numbers[0] == numbers[3]||numbers[1]==numbers[4])?GameProperty.FOUR_OF_A_KIND:GameProperty.NOT_EXISTS_POKER_TYPE;
