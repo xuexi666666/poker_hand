@@ -9,6 +9,9 @@ public class Poker implements Comparable<Poker> {
     private int[] numbers;
     private String[] suits;
 
+    public static void main(String[] args) {
+        System.out.println(StringUtils.join(new int[]{1,2,3},','));
+    }
     public Poker(List<Card> cards) {
         this.cards = new ArrayList<>(cards);
         numbers = values();
@@ -134,8 +137,8 @@ public class Poker implements Comparable<Poker> {
         }else if(thisPokerType < otherPokerType){
             return GameProperty.POKER_2_WINNER;
         }else{
-            String thisNumStr = StringUtils.join(numbers);
-            String otherNumStr = StringUtils.join(o.getNumbers());
+            String thisNumStr = StringUtils.join(numbers,',');
+            String otherNumStr = StringUtils.join(o.getNumbers(),',');
             return thisNumStr.compareTo(otherNumStr);
         }
     }

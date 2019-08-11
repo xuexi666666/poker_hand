@@ -1,3 +1,4 @@
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -40,7 +41,6 @@ public class PokerTest {
 
     private List<Card> straightFlushCards;
     private Poker straightFlush;
-
 
     @Test
     public void should_return_who_win_when_give_each_player_one_poker() {
@@ -216,15 +216,19 @@ public class PokerTest {
         Poker playerOne = mock(Poker.class);
         Poker playerTwo = mock(Poker.class);
         int randomLevel = Game.rand.nextInt(GameProperty.STRAIGHT_FLUSH)+1;
+        String biggerNumbersStr = StringUtils.join(Game.poker_numbers_bigger_init(randomLevel),',');
+        String smallerNumbersStr = StringUtils.join(Game.poker_numbers_smaller_init(randomLevel),',');
         //when
         when(playerOne.getPokerType()).thenReturn(randomLevel);
         when(playerTwo.getPokerType()).thenReturn(randomLevel);
         when(playerOne.compareTo(playerTwo)).thenReturn(GameProperty.TIE);
+        int numsCompare = StringUtils.compare(biggerNumbersStr,smallerNumbersStr);
         int playerOneLevel = playerOne.getPokerType();
         int playerTwoLevel = playerTwo.getPokerType();
         int resOne = playerOne.compareTo(playerTwo);
         //then
         Assert.assertTrue(playerOneLevel==playerTwoLevel);
+        Assert.assertTrue(numsCompare == 1);
         Assert.assertEquals(resOne, GameProperty.TIE);
     }
 
