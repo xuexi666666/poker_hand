@@ -210,22 +210,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PokerTest.should_return_four_OfAKind_when_give_a_four_OfAKind_poker">
-    <configuration name="PokerTest.should_return_Straight_when_give_a_straight_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PokerTest.should_return_Straight_Flush_when_give_a_Straight_Flush_poker">
+    <configuration name="PokerTest.should_return_Straight_Flush_when_give_a_Straight_Flush_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PokerTest" />
-      <option name="METHOD_NAME" value="should_return_Straight_when_give_a_straight_poker" />
+      <option name="METHOD_NAME" value="should_return_Straight_Flush_when_give_a_Straight_Flush_poker" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PokerTest.should_return_ThreeOfAKind_when_give_a_three_of_kind_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PokerTest.should_return_Straight_when_give_a_straight_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PokerTest" />
-      <option name="METHOD_NAME" value="should_return_ThreeOfAKind_when_give_a_three_of_kind_poker" />
+      <option name="METHOD_NAME" value="should_return_Straight_when_give_a_straight_poker" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -263,11 +263,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PokerTest.should_return_Straight_Flush_when_give_a_Straight_Flush_poker" />
         <item itemvalue="JUnit.PokerTest.should_return_four_OfAKind_when_give_a_four_OfAKind_poker" />
         <item itemvalue="JUnit.PokerTest.should_return_full_house_when_give_a_full_house_poker" />
         <item itemvalue="JUnit.PokerTest.should_return_flush_when_give_a_flush_poker" />
         <item itemvalue="JUnit.PokerTest.should_return_Straight_when_give_a_straight_poker" />
-        <item itemvalue="JUnit.PokerTest.should_return_ThreeOfAKind_when_give_a_three_of_kind_poker" />
       </list>
     </recent_temporary>
   </component>

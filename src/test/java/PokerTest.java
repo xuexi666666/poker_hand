@@ -206,10 +206,14 @@ public class PokerTest {
     @Test
     public void should_return_Straight_Flush_when_give_a_Straight_Flush_poker() {
         //given
-        straightFlushCards = Game.straight_flush_init();
-        straightFlush = new Poker(straightFlushCards);
+//        straightFlushCards = Game.straight_flush_init();
+//        straightFlush = new Poker(straightFlushCards);
+        int[] straight_Flush_numbers = {2,3,4,5,6};
+        String[] straight_Flush_suits = {"C","C","C","C","C"};
+        poker.setNumbers(straight_Flush_numbers);
+        poker.setSuits(straight_Flush_suits);
         //when
-        int res = straightFlush.isStraightFlush();
+        int res = poker.isStraightFlush();
         //then
         Assert.assertEquals(res, GameProperty.STRAIGHT_FLUSH);
     }
