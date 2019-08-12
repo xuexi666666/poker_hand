@@ -185,17 +185,22 @@ public class PokerTest {
         int res2 = poker.isFullHouse();
         //then
         Assert.assertEquals(res1, GameProperty.FULL_HOUSE);
+        Assert.assertEquals(res1, res2);
     }
 
     @Test
     public void should_return_four_OfAKind_when_give_a_four_OfAKind_poker() {
         //given
-        fourOfAKindCards = Game.four_OfAKind_init();
-        fourOfAKind = new Poker(fourOfAKindCards);
+        int[] four_OfAKind_numbers1 = {3,3,3,3,6};
+        int[] four_OfAKind_numbers2 = {2,3,3,3,3};
+        poker.setNumbers(four_OfAKind_numbers1);
         //when
-        int res = fourOfAKind.isFourOfAKind();
+        int res1 = poker.isFourOfAKind();
+        poker.setNumbers(four_OfAKind_numbers2);
+        int res2 = poker.isFourOfAKind();
         //then
-        Assert.assertEquals(res, GameProperty.FOUR_OF_A_KIND);
+        Assert.assertEquals(res1, GameProperty.FOUR_OF_A_KIND);
+        Assert.assertEquals(res1, res2);
     }
 
     @Test

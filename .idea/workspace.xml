@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8bc364e-e97a-4339-8b79-ad5295906a9a" name="Default Changelist" comment="update some same code and add tasking doc">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Poker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Poker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Poker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
+            <state relative-caret-position="-290">
               <caret line="88" column="92" lean-forward="true" selection-start-line="88" selection-start-column="92" selection-end-line="88" selection-end-column="92" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -48,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-955">
+            <state relative-caret-position="-1417">
               <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -60,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="181" selection-start-line="181" selection-end-line="181" />
+            <state relative-caret-position="178">
+              <caret line="198" column="46" selection-start-line="198" selection-start-column="46" selection-end-line="198" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1055#1056#0" expanded="true" />
@@ -121,8 +120,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/GameProperty.java" />
         <option value="$PROJECT_DIR$/src/main/java/RepeatRule.java" />
-        <option value="$PROJECT_DIR$/src/test/java/PokerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Poker.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PokerTest.java" />
       </list>
     </option>
   </component>
@@ -211,22 +210,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PokerTest.should_return_full_house_when_give_a_full_house_poker">
+  <component name="RunManager" selected="JUnit.PokerTest.should_return_four_OfAKind_when_give_a_four_OfAKind_poker">
     <configuration name="PokerTest.should_return_Straight_when_give_a_straight_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PokerTest" />
       <option name="METHOD_NAME" value="should_return_Straight_when_give_a_straight_poker" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PokerTest.should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit_test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PokerTest" />
-      <option name="METHOD_NAME" value="should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -252,6 +241,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PokerTest.should_return_four_OfAKind_when_give_a_four_OfAKind_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PokerTest" />
+      <option name="METHOD_NAME" value="should_return_four_OfAKind_when_give_a_four_OfAKind_poker" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PokerTest.should_return_full_house_when_give_a_full_house_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <option name="PACKAGE_NAME" value="" />
@@ -264,11 +263,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PokerTest.should_return_four_OfAKind_when_give_a_four_OfAKind_poker" />
         <item itemvalue="JUnit.PokerTest.should_return_full_house_when_give_a_full_house_poker" />
         <item itemvalue="JUnit.PokerTest.should_return_flush_when_give_a_flush_poker" />
         <item itemvalue="JUnit.PokerTest.should_return_Straight_when_give_a_straight_poker" />
         <item itemvalue="JUnit.PokerTest.should_return_ThreeOfAKind_when_give_a_three_of_kind_poker" />
-        <item itemvalue="JUnit.PokerTest.should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards" />
       </list>
     </recent_temporary>
   </component>
@@ -462,18 +461,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokerTest_should_return_ONE_PAIR_when_give_a_pair_of_identical_cards - 2019.08.12 at 12h 39m 15s.xml">
-      <configuration name="PokerTest.should_return_ONE_PAIR_when_give_a_pair_of_identical_cards" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerTest_should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards - 2019.08.12 at 12h 40m 22s.xml">
-      <configuration name="PokerTest.should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerTest_should_return_ThreeOfAKind_when_give_a_three_of_kind_poker - 2019.08.12 at 12h 41m 53s.xml">
-      <configuration name="PokerTest.should_return_ThreeOfAKind_when_give_a_three_of_kind_poker" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerTest_should_return_Straight_when_give_a_straight_poker - 2019.08.12 at 12h 45m 40s.xml">
-      <configuration name="PokerTest.should_return_Straight_when_give_a_straight_poker" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PokerTest_should_return_flush_when_give_a_flush_poker - 2019.08.12 at 12h 47m 54s.xml">
       <configuration name="PokerTest.should_return_flush_when_give_a_flush_poker" configurationId="JUnit" />
     </history-entry>
@@ -490,6 +477,18 @@
       <configuration name="PokerTest.should_return_full_house_when_give_a_full_house_poker" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PokerTest_should_return_full_house_when_give_a_full_house_poker - 2019.08.12 at 12h 56m 45s.xml">
+      <configuration name="PokerTest.should_return_full_house_when_give_a_full_house_poker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest_should_return_full_house_when_give_a_full_house_poker - 2019.08.12 at 12h 56m 48s.xml">
+      <configuration name="PokerTest.should_return_full_house_when_give_a_full_house_poker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest_should_return_full_house_when_give_a_full_house_poker - 2019.08.12 at 12h 56m 59s.xml">
+      <configuration name="PokerTest.should_return_full_house_when_give_a_full_house_poker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest_should_return_full_house_when_give_a_full_house_poker - 2019.08.12 at 12h 57m 20s.xml">
+      <configuration name="PokerTest.should_return_full_house_when_give_a_full_house_poker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest_should_return_full_house_when_give_a_full_house_poker - 2019.08.12 at 12h 58m 24s.xml">
       <configuration name="PokerTest.should_return_full_house_when_give_a_full_house_poker" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -509,8 +508,8 @@
       <window_info id="Job Explorer" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28639054" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39171597" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28639054" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39171597" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -925,16 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-955">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../poker/Hand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4356" />
@@ -942,7 +931,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Poker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
+        <state relative-caret-position="-290">
           <caret line="88" column="92" lean-forward="true" selection-start-line="88" selection-start-column="92" selection-end-line="88" selection-end-column="92" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -958,10 +947,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1417">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="181" selection-start-line="181" selection-end-line="181" />
+        <state relative-caret-position="178">
+          <caret line="198" column="46" selection-start-line="198" selection-start-column="46" selection-end-line="198" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1055#1056#0" expanded="true" />
