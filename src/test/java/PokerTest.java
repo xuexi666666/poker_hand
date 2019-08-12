@@ -161,10 +161,12 @@ public class PokerTest {
     @Test
     public void should_return_flush_when_give_a_flush_poker() {
         //given
-        flushCards = Game.flush_init();
-        flush = new Poker(flushCards);
+//        flushCards = Game.flush_init();
+//        flush = new Poker(flushCards);
+        String[] flush_suits = {"C","C","C","C","C"};
+        poker.setSuits(flush_suits);
         //when
-        int res = flush.isFlush();
+        int res = poker.isFlush();
         //then
         Assert.assertEquals(res, GameProperty.FLUSH);
     }
