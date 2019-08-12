@@ -143,12 +143,19 @@ public class PokerTest {
     @Test
     public void should_return_Straight_when_give_a_straight_poker() {
         //given
-        straightCards = Game.straight_init();
-        straight = new Poker(straightCards);
+//        straightCards = Game.straight_init();
+//        straight = new Poker(straightCards);
+        int[] straight_numbers1 = {3,4,5,6,7};
+        int[] straight_numbers2 = {2,3,4,5,14};
+        poker.setNumbers(straight_numbers1);
         //when
-        int res = straight.isStraight();
+        int res1 = poker.isStraight();
+        poker.setNumbers(straight_numbers2);
+        int res2 = poker.isStraight();
         //then
-        Assert.assertEquals(res, GameProperty.STRAIGHT);
+        Assert.assertEquals(res1, GameProperty.STRAIGHT);
+        Assert.assertEquals(res1, res2);
+
     }
 
     @Test

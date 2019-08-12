@@ -78,7 +78,7 @@ public class Poker implements Comparable<Poker> {
 
     private boolean isMaxMinusMinIsFourOrThirteen() {
         int res = numbers[4] - numbers[0];
-        return res == 4 || res == 13;
+        return res == 4 || res == 12;
     }
 
     protected int isFlush() {
