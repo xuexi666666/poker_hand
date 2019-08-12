@@ -13,32 +13,32 @@ import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PokerTest {
-    private List<Card> highCards;
-    private Poker highCard;
-
-    private List<Card> pairCards;
-    private Poker onePair;
-
-    private List<Card> twoPairCards;
-    private Poker twoPair;
-
-    private List<Card> threeOfAKindCards;
-    private Poker threeOfAKind;
-
-    private List<Card> straightCards;
-    private Poker straight;
-
-    private List<Card> flushCards;
-    private Poker flush;
-
-    private List<Card> fullHouseCards;
-    private Poker fullHouse;
-
-    private List<Card> fourOfAKindCards;
-    private Poker fourOfAKind;
-
-    private List<Card> straightFlushCards;
-    private Poker straightFlush;
+//    private List<Card> highCards;
+//    private Poker highCard;
+//
+//    private List<Card> pairCards;
+//    private Poker onePair;
+//
+//    private List<Card> twoPairCards;
+//    private Poker twoPair;
+//
+//    private List<Card> threeOfAKindCards;
+//    private Poker threeOfAKind;
+//
+//    private List<Card> straightCards;
+//    private Poker straight;
+//
+//    private List<Card> flushCards;
+//    private Poker flush;
+//
+//    private List<Card> fullHouseCards;
+//    private Poker fullHouse;
+//
+//    private List<Card> fourOfAKindCards;
+//    private Poker fourOfAKind;
+//
+//    private List<Card> straightFlushCards;
+//    private Poker straightFlush;
     Poker poker;
 
     @Before
