@@ -215,15 +215,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PokerTest.should_return_ONE_PAIR_when_give_a_pair_of_identical_cards">
-    <configuration name="All in junit_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit_test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PokerTest.should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards">
     <configuration name="PokerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <option name="PACKAGE_NAME" value="" />
@@ -253,6 +245,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PokerTest.should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PokerTest" />
+      <option name="METHOD_NAME" value="should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PokerTest.should_return_not_this_poker_type_when_give_a_error_poker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <option name="PACKAGE_NAME" value="" />
@@ -265,11 +267,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PokerTest.should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards" />
         <item itemvalue="JUnit.PokerTest.should_return_ONE_PAIR_when_give_a_pair_of_identical_cards" />
         <item itemvalue="JUnit.PokerTest.should_return_not_this_poker_type_when_give_a_error_poker" />
         <item itemvalue="JUnit.PokerTest.should_return_HIGH_CARD_when_give_a_high_card_poker" />
         <item itemvalue="JUnit.PokerTest" />
-        <item itemvalue="JUnit.All in junit_test" />
       </list>
     </recent_temporary>
   </component>

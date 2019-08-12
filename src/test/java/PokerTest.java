@@ -117,10 +117,12 @@ public class PokerTest {
     @Test
     public void should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards() {
         //given
-        twoPairCards = Game.two_pair_init();
-        twoPair = new Poker(twoPairCards);
+//        twoPairCards = Game.two_pair_init();
+//        twoPair = new Poker(twoPairCards);
+        int[] two_pair_numbers = {3,3,6,6,10};
+        poker.setNumbers(two_pair_numbers);
         //when
-        int res = twoPair.isTwoPair();
+        int res = poker.isTwoPair();
         //then
         Assert.assertEquals(res, GameProperty.TWO_PAIR);
     }
