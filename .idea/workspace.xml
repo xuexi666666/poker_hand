@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8bc364e-e97a-4339-8b79-ad5295906a9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,27 +18,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Poker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2448">
+            <state relative-caret-position="-1571">
               <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2426#2427#0" expanded="true" />
                 <element signature="e#2525#2526#0" expanded="true" />
+                <element signature="e#3251#3252#0" expanded="true" />
                 <element signature="e#3279#3280#0" expanded="true" />
+                <element signature="e#3318#3319#0" expanded="true" />
                 <element signature="e#3391#3392#0" expanded="true" />
+                <element signature="e#3436#3437#0" expanded="true" />
                 <element signature="e#3515#3516#0" expanded="true" />
-                <element signature="e#3506#3507#0" expanded="true" />
-                <element signature="e#3540#3541#0" expanded="true" />
-                <element signature="e#3573#3574#0" expanded="true" />
-                <element signature="e#3603#3604#0" expanded="true" />
-                <element signature="e#3648#3649#0" expanded="true" />
-                <element signature="e#3686#3687#0" expanded="true" />
-                <element signature="e#3720#3721#0" expanded="true" />
-                <element signature="e#3748#3749#0" expanded="true" />
-                <element signature="e#3792#3793#0" expanded="true" />
-                <element signature="e#3826#3827#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1914">
+              <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6248">
-              <caret line="284" column="8" selection-start-line="284" selection-start-column="8" selection-end-line="284" selection-end-column="8" />
+            <state relative-caret-position="-2118">
+              <caret line="174" selection-start-line="174" selection-end-line="174" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,10 +63,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Test.class">
+        <entry file="file://$PROJECT_DIR$/src/main/java/GameProperty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="17" column="16" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="16" />
+            <state relative-caret-position="792">
+              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,8 +124,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/GameProperty.java" />
         <option value="$PROJECT_DIR$/src/main/java/Poker.java" />
-        <option value="$PROJECT_DIR$/src/test/java/PokerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/RepeatRule.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PokerTest.java" />
       </list>
     </option>
   </component>
@@ -128,8 +138,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="393" />
-    <option name="y" value="30" />
+    <option name="x" value="487" />
+    <option name="y" value="98" />
     <option name="width" value="1423" />
     <option name="height" value="1006" />
   </component>
@@ -139,7 +149,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,12 +165,33 @@
               <item name="junit_test" type="b2602c69:ProjectViewProjectNode" />
               <item name="poker_hand" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="junit_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poker_hand" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="junit_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poker_hand" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="junit_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poker_hand" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -184,7 +214,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in junit_test">
+  <component name="RunManager" selected="JUnit.PokerTest">
     <configuration name="All in junit_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <option name="PACKAGE_NAME" value="" />
@@ -234,10 +264,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PokerTest" />
         <item itemvalue="JUnit.All in junit_test" />
         <item itemvalue="JUnit.PokerTest.should_winner_when_poker_level_higher" />
         <item itemvalue="JUnit.PokerTest.should_return_exits_poker_type_when_random_genentor_poker" />
-        <item itemvalue="JUnit.PokerTest" />
         <item itemvalue="JUnit.PokerTest.should_return_tie_when_give_exactly_the_same_poker" />
       </list>
     </recent_temporary>
@@ -414,19 +444,17 @@
       <option name="project" value="LOCAL" />
       <updated>1565560329854</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="check all test and all green">
+      <created>1565561436014</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1565561436014</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PokerTest_should_return_tie_when_give_exactly_the_same_poker - 2019.08.12 at 04h 57m 11s.xml">
-      <configuration name="PokerTest.should_return_tie_when_give_exactly_the_same_poker" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerTest_should_return_tie_when_give_exactly_the_same_poker - 2019.08.12 at 05h 03m 29s.xml">
-      <configuration name="PokerTest.should_return_tie_when_give_exactly_the_same_poker" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PokerTest - 2019.08.12 at 05h 04m 31s.xml">
-      <configuration name="PokerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PokerTest_should_winner_when_poker_level_higher - 2019.08.12 at 05h 35m 55s.xml">
       <configuration name="PokerTest.should_winner_when_poker_level_higher" configurationId="JUnit" />
     </history-entry>
@@ -448,12 +476,21 @@
     <history-entry file="All_in_junit_test - 2019.08.12 at 06h 04m 01s.xml">
       <configuration name="All in junit_test" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_junit_test - 2019.08.12 at 06h 10m 10s.xml">
+      <configuration name="All in junit_test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest - 2019.08.12 at 08h 37m 20s.xml">
+      <configuration name="PokerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PokerTest - 2019.08.12 at 08h 40m 11s.xml">
+      <configuration name="PokerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="393" y="30" width="1423" height="1006" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1561806" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17811158" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24944486" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -465,7 +502,7 @@
       <window_info id="Job Explorer" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.09467456" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.07932961" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39171597" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -543,7 +580,8 @@
     <MESSAGE value="add should_return_tie_when_give_exactly_the_same_poker test" />
     <MESSAGE value="refactor should_return_tie_when_give_exactly_the_same_poker test" />
     <MESSAGE value="add should_winner_when_poker_level_higher test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add should_winner_when_poker_level_higher test" />
+    <MESSAGE value="check all test and all green" />
+    <option name="LAST_COMMIT_MESSAGE" value="check all test and all green" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/main.iml">
@@ -817,21 +855,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PokerType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#271#272#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PokerType.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/sales/SalesAppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2908">
@@ -863,10 +887,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/RepeatRule.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Test.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3278">
-          <caret line="149" column="42" selection-start-line="149" selection-start-column="42" selection-end-line="149" selection-end-column="42" />
+        <state relative-caret-position="242">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Poker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1571">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2426#2427#0" expanded="true" />
+            <element signature="e#2525#2526#0" expanded="true" />
+            <element signature="e#3251#3252#0" expanded="true" />
+            <element signature="e#3279#3280#0" expanded="true" />
+            <element signature="e#3318#3319#0" expanded="true" />
+            <element signature="e#3391#3392#0" expanded="true" />
+            <element signature="e#3436#3437#0" expanded="true" />
+            <element signature="e#3515#3516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2118">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -875,58 +925,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GameProperty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="24" lean-forward="true" selection-start-line="20" selection-end-line="21" />
+        <state relative-caret-position="792">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Test.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RepeatRule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6248">
-          <caret line="284" column="8" selection-start-line="284" selection-start-column="8" selection-end-line="284" selection-end-column="8" />
+        <state relative-caret-position="-1914">
+          <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Poker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2448">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2525#2526#0" expanded="true" />
-            <element signature="e#3279#3280#0" expanded="true" />
-            <element signature="e#3391#3392#0" expanded="true" />
-            <element signature="e#3515#3516#0" expanded="true" />
-            <element signature="e#3506#3507#0" expanded="true" />
-            <element signature="e#3540#3541#0" expanded="true" />
-            <element signature="e#3573#3574#0" expanded="true" />
-            <element signature="e#3603#3604#0" expanded="true" />
-            <element signature="e#3648#3649#0" expanded="true" />
-            <element signature="e#3686#3687#0" expanded="true" />
-            <element signature="e#3720#3721#0" expanded="true" />
-            <element signature="e#3748#3749#0" expanded="true" />
-            <element signature="e#3792#3793#0" expanded="true" />
-            <element signature="e#3826#3827#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -173,16 +173,6 @@ public class PokerTest {
         Assert.assertEquals(res, GameProperty.STRAIGHT_FLUSH);
     }
 
-    @Test
-    public void should_return__when_give_a_Straight_Flush_poker() {
-        //given
-        straightFlushCards = Game.straight_flush_init();
-        straightFlush = new Poker(straightFlushCards);
-        //when
-        int res = straightFlush.isStraightFlush();
-        //then
-        Assert.assertEquals(res, GameProperty.STRAIGHT_FLUSH);
-    }
 
     @Test
     public void should_return_poker_kinds_level_highest_win_when_give_two_different_kinds_poker_by_mock() {
