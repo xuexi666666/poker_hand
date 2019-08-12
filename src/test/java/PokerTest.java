@@ -13,32 +13,6 @@ import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PokerTest {
-//    private List<Card> highCards;
-//    private Poker highCard;
-//
-//    private List<Card> pairCards;
-//    private Poker onePair;
-//
-//    private List<Card> twoPairCards;
-//    private Poker twoPair;
-//
-//    private List<Card> threeOfAKindCards;
-//    private Poker threeOfAKind;
-//
-//    private List<Card> straightCards;
-//    private Poker straight;
-//
-//    private List<Card> flushCards;
-//    private Poker flush;
-//
-//    private List<Card> fullHouseCards;
-//    private Poker fullHouse;
-//
-//    private List<Card> fourOfAKindCards;
-//    private Poker fourOfAKind;
-//
-//    private List<Card> straightFlushCards;
-//    private Poker straightFlush;
     Poker poker;
 
     @Before
@@ -73,13 +47,9 @@ public class PokerTest {
     @Test
     public void should_return_not_this_poker_type_when_give_a_error_poker() {
         //given
-//        straightFlushCards = Game.straight_flush_init();
-//        straightFlush = new Poker(straightFlushCards);
-        //refactor after
         int[] straight_numbers = {6,7,8,9,10};
         poker.setNumbers(straight_numbers);
         //when
-//        int res = straightFlush.isFullHouse();
         int res = poker.isFullHouse();
         //then
         Assert.assertEquals(res, GameProperty.NOT_THIS_POKER_TYPE);
@@ -88,13 +58,9 @@ public class PokerTest {
     @Test
     public void should_return_HIGH_CARD_when_give_a_high_card_poker() {
         //given
-//        highCards = Game.high_card_init();
-//        highCard = new Poker(highCards);
-        //refactor after
         int[] high_card_numbers = {3,5,6,7,10};
         poker.setNumbers(high_card_numbers);
         //when
-//        int res = highCard.getPokerType();
         int res = poker.getPokerType();
         //then
         Assert.assertEquals(res, GameProperty.HIGH_CARD);
@@ -103,9 +69,6 @@ public class PokerTest {
     @Test
     public void should_return_ONE_PAIR_when_give_a_pair_of_identical_cards() {
         //given
-//        pairCards = Game.one_pair_init();
-//        onePair = new Poker(pairCards);
-        //refactor after
         int[] one_pair_numbers = {3,3,5,6,10};
         poker.setNumbers(one_pair_numbers);
         //when
@@ -117,8 +80,6 @@ public class PokerTest {
     @Test
     public void should_return_TWO_PAIR_when_give_tow_pair_of_identical_cards() {
         //given
-//        twoPairCards = Game.two_pair_init();
-//        twoPair = new Poker(twoPairCards);
         int[] two_pair_numbers = {3,3,6,6,10};
         poker.setNumbers(two_pair_numbers);
         //when
@@ -130,8 +91,6 @@ public class PokerTest {
     @Test
     public void should_return_ThreeOfAKind_when_give_a_three_of_kind_poker() {
         //given
-//        threeOfAKindCards = Game.three_of_kind_init();
-//        threeOfAKind = new Poker(threeOfAKindCards);
         int[] three_of_kind_numbers = {3,3,3,6,10};
         poker.setNumbers(three_of_kind_numbers);
         //when
@@ -143,8 +102,6 @@ public class PokerTest {
     @Test
     public void should_return_Straight_when_give_a_straight_poker() {
         //given
-//        straightCards = Game.straight_init();
-//        straight = new Poker(straightCards);
         int[] straight_numbers1 = {3,4,5,6,7};
         int[] straight_numbers2 = {2,3,4,5,14};
         poker.setNumbers(straight_numbers1);
@@ -161,8 +118,6 @@ public class PokerTest {
     @Test
     public void should_return_flush_when_give_a_flush_poker() {
         //given
-//        flushCards = Game.flush_init();
-//        flush = new Poker(flushCards);
         String[] flush_suits = {"C","C","C","C","C"};
         poker.setSuits(flush_suits);
         //when
@@ -174,8 +129,6 @@ public class PokerTest {
     @Test
     public void should_return_full_house_when_give_a_full_house_poker() {
         //given
-//        fullHouseCards = Game.full_house_init();
-//        fullHouse = new Poker(fullHouseCards);
         int[] full_house_numbers1 = {3,3,3,6,6};
         int[] full_house_numbers2 = {2,2,3,3,3};
         poker.setNumbers(full_house_numbers1);
@@ -206,8 +159,6 @@ public class PokerTest {
     @Test
     public void should_return_Straight_Flush_when_give_a_Straight_Flush_poker() {
         //given
-//        straightFlushCards = Game.straight_flush_init();
-//        straightFlush = new Poker(straightFlushCards);
         int[] straight_Flush_numbers = {2,3,4,5,6};
         String[] straight_Flush_suits = {"C","C","C","C","C"};
         poker.setNumbers(straight_Flush_numbers);
