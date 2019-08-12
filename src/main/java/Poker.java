@@ -8,6 +8,9 @@ public class Poker implements Comparable<Poker> {
     private int[] numbers;
     private String[] suits;
 
+    public Poker() {
+    }
+
     public Poker(List<Card> cards) {
         this.cards = new ArrayList<>(cards);
         numbers = convertIntArray();
@@ -69,9 +72,13 @@ public class Poker implements Comparable<Poker> {
     }
 
     protected int isStraight() {
-        boolean MaxMinusMinIsFour = numbers[4] - numbers[0] == 4;
         long numberSize = Arrays.stream(numbers).distinct().count();
-        return (MaxMinusMinIsFour && numberSize == 5) ? GameProperty.STRAIGHT : GameProperty.NOT_THIS_POKER_TYPE;
+        return (isMaxMinusMinIsFourOrThirteen() && numberSize == 5) ? GameProperty.STRAIGHT : GameProperty.NOT_THIS_POKER_TYPE;
+    }
+
+    private boolean isMaxMinusMinIsFourOrThirteen() {
+        int res = numbers[4] - numbers[0];
+        return res == 4 || res == 13;
     }
 
     protected int isFlush() {

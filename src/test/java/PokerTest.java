@@ -1,5 +1,6 @@
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -38,6 +39,12 @@ public class PokerTest {
 
     private List<Card> straightFlushCards;
     private Poker straightFlush;
+    Poker poker;
+
+    @Before
+    public void init(){
+        poker = new Poker();
+    }
 
     @Test
     public void should_return_who_win_when_give_each_player_one_poker() {
@@ -66,10 +73,12 @@ public class PokerTest {
     @Test
     public void should_return_not_this_poker_type_when_give_a_error_poker() {
         //given
-        straightFlushCards = Game.straight_flush_init();
-        straightFlush = new Poker(straightFlushCards);
+//        straightFlushCards = Game.straight_flush_init();
+//        straightFlush = new Poker(straightFlushCards);
+        poker.setNumbers(new int[]{6,7,8,9,10});
         //when
-        int res = straightFlush.isFullHouse();
+//        int res = straightFlush.isFullHouse();
+        int res = poker.isFullHouse();
         //then
         Assert.assertEquals(res, GameProperty.NOT_THIS_POKER_TYPE);
     }
