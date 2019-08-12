@@ -75,7 +75,8 @@ public class PokerTest {
         //given
 //        straightFlushCards = Game.straight_flush_init();
 //        straightFlush = new Poker(straightFlushCards);
-        poker.setNumbers(new int[]{6,7,8,9,10});
+        int[] straight_numbers = {6,7,8,9,10};
+        poker.setNumbers(straight_numbers);
         //when
 //        int res = straightFlush.isFullHouse();
         int res = poker.isFullHouse();
@@ -86,10 +87,13 @@ public class PokerTest {
     @Test
     public void should_return_HIGH_CARD_when_give_a_high_card_poker() {
         //given
-        highCards = Game.high_card_init();
-        highCard = new Poker(highCards);
+//        highCards = Game.high_card_init();
+//        highCard = new Poker(highCards);
+        int[] high_card_numbers = {3,5,6,7,10};
+        poker.setNumbers(high_card_numbers);
         //when
-        int res = highCard.getPokerType();
+//        int res = highCard.getPokerType();
+        int res = poker.getPokerType();
         //then
         Assert.assertEquals(res, GameProperty.HIGH_CARD);
     }
