@@ -130,10 +130,12 @@ public class PokerTest {
     @Test
     public void should_return_ThreeOfAKind_when_give_a_three_of_kind_poker() {
         //given
-        threeOfAKindCards = Game.three_of_kind_init();
-        threeOfAKind = new Poker(threeOfAKindCards);
+//        threeOfAKindCards = Game.three_of_kind_init();
+//        threeOfAKind = new Poker(threeOfAKindCards);
+        int[] three_of_kind_numbers = {3,3,3,6,10};
+        poker.setNumbers(three_of_kind_numbers);
         //when
-        int res = threeOfAKind.isThreeOfAKind();
+        int res = poker.isThreeOfAKind();
         //then
         Assert.assertEquals(res, GameProperty.THREE_OF_A_KIND);
     }
