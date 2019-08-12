@@ -75,6 +75,7 @@ public class PokerTest {
         //given
 //        straightFlushCards = Game.straight_flush_init();
 //        straightFlush = new Poker(straightFlushCards);
+        //refactor after
         int[] straight_numbers = {6,7,8,9,10};
         poker.setNumbers(straight_numbers);
         //when
@@ -89,6 +90,7 @@ public class PokerTest {
         //given
 //        highCards = Game.high_card_init();
 //        highCard = new Poker(highCards);
+        //refactor after
         int[] high_card_numbers = {3,5,6,7,10};
         poker.setNumbers(high_card_numbers);
         //when
@@ -101,10 +103,13 @@ public class PokerTest {
     @Test
     public void should_return_ONE_PAIR_when_give_a_pair_of_identical_cards() {
         //given
-        pairCards = Game.one_pair_init();
-        onePair = new Poker(pairCards);
+//        pairCards = Game.one_pair_init();
+//        onePair = new Poker(pairCards);
+        //refactor after
+        int[] one_pair_numbers = {3,3,5,6,10};
+        poker.setNumbers(one_pair_numbers);
         //when
-        int res = onePair.isOnePair();
+        int res = poker.isOnePair();
         //then
         Assert.assertEquals(res, GameProperty.ONE_PAIR);
     }
