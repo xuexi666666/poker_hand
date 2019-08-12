@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8bc364e-e97a-4339-8b79-ad5295906a9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PokerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PokerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/PokerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PokerTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1914">
+            <state relative-caret-position="-1835">
               <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2118">
-              <caret line="174" selection-start-line="174" selection-end-line="174" />
+            <state relative-caret-position="517">
+              <caret line="309" column="5" lean-forward="true" selection-start-line="309" selection-start-column="5" selection-end-line="309" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,8 +138,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="487" />
-    <option name="y" value="98" />
+    <option name="x" value="227" />
+    <option name="y" value="105" />
     <option name="width" value="1423" />
     <option name="height" value="1006" />
   </component>
@@ -451,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565561436014</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="update some same code and add tasking doc">
+      <created>1565570692642</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1565570692642</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -487,10 +494,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="227" y="105" width="1423" height="1006" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17811158" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2457439" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24944486" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -502,7 +509,7 @@
       <window_info id="Job Explorer" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.07932961" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.08402367" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39171597" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -581,7 +588,8 @@
     <MESSAGE value="refactor should_return_tie_when_give_exactly_the_same_poker test" />
     <MESSAGE value="add should_winner_when_poker_level_higher test" />
     <MESSAGE value="check all test and all green" />
-    <option name="LAST_COMMIT_MESSAGE" value="check all test and all green" />
+    <MESSAGE value="update some same code and add tasking doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="update some same code and add tasking doc" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/main.iml">
@@ -913,16 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2118">
-          <caret line="174" selection-start-line="174" selection-end-line="174" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GameProperty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
@@ -935,8 +933,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1914">
+        <state relative-caret-position="-1835">
           <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PokerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="309" column="5" lean-forward="true" selection-start-line="309" selection-start-column="5" selection-end-line="309" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
