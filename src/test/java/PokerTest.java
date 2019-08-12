@@ -174,10 +174,12 @@ public class PokerTest {
     @Test
     public void should_return_full_house_when_give_a_full_house_poker() {
         //given
-        fullHouseCards = Game.full_house_init();
-        fullHouse = new Poker(fullHouseCards);
+//        fullHouseCards = Game.full_house_init();
+//        fullHouse = new Poker(fullHouseCards);
+        int[] full_house_numbers = {3,3,3,3,10};
+        poker.setNumbers(full_house_numbers);
         //when
-        int res = fullHouse.isFullHouse();
+        int res = poker.isFullHouse();
         //then
         Assert.assertEquals(res, GameProperty.FULL_HOUSE);
     }
