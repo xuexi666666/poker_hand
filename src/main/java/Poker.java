@@ -86,9 +86,13 @@ public class Poker implements Comparable<Poker> {
     }
 
     protected int isFullHouse() {
-        boolean isThreeNumberEqual = (numbers[0] == numbers[2]) || (numbers[2] == numbers[4]);
-        boolean isTwoNumberEqual = (numbers[3] == numbers[4] || numbers[0] == numbers[1]);
-        return (isThreeNumberEqual && isTwoNumberEqual) ? GameProperty.FULL_HOUSE : GameProperty.NOT_THIS_POKER_TYPE;
+        return checkFullHouse() ? GameProperty.FULL_HOUSE : GameProperty.NOT_THIS_POKER_TYPE;
+    }
+
+    private boolean checkFullHouse() {
+        boolean conditionOne = (numbers[0] == numbers[2] && numbers[3] == numbers[4]);
+        boolean conditionTwo = (numbers[0] == numbers[1] && numbers[2] == numbers[4]);
+        return conditionOne || conditionTwo;
     }
 
     protected int isFourOfAKind() {

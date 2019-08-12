@@ -176,12 +176,15 @@ public class PokerTest {
         //given
 //        fullHouseCards = Game.full_house_init();
 //        fullHouse = new Poker(fullHouseCards);
-        int[] full_house_numbers = {3,3,3,3,10};
-        poker.setNumbers(full_house_numbers);
+        int[] full_house_numbers1 = {3,3,3,6,6};
+        int[] full_house_numbers2 = {2,2,3,3,3};
+        poker.setNumbers(full_house_numbers1);
         //when
-        int res = poker.isFullHouse();
+        int res1 = poker.isFullHouse();
+        poker.setNumbers(full_house_numbers2);
+        int res2 = poker.isFullHouse();
         //then
-        Assert.assertEquals(res, GameProperty.FULL_HOUSE);
+        Assert.assertEquals(res1, GameProperty.FULL_HOUSE);
     }
 
     @Test
